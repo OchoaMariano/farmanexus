@@ -5,8 +5,8 @@ module.exports = {
     theme: {
         extend: {
             backgroundImage: {
-                'hero': "url('./public/bg-hero.jpg')",
-                'cta': "url('./public/bg-cta.jpg')",
+                'hero': "url('public/bg-hero.jpg')",
+                'cta': "url('public/bg-cta.jpg')",
             },
             colors: {
                 'orange': '#f18a00',
