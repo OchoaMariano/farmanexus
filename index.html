@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farmanexus</title>
+</head>
+
+<body class="farmanexus">
+
+    
+    <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 nav sticky top-0 z-50">
+        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+            <a href="/" class="flex items-center">
+                <img src="public/farmanexus-logo.svg" class="mr-3 h-8 sm:h-12" alt="Farmanexus Logo" />
+            </a>
+            <div class="flex items-center order-1 lg:order-2">
+                <a href="#" class="hidden sm:flex text-orange bg-white border-2 hover:bg-gray-light hover:text-orange hover:border-2 hover:border-gray-light font-bold rounded-md text-sm px-5 py-2.5 mr-2 focus:outline-none " onclick="toggleModal('modal-id')">Contacto</a>
+                <a href="#" class="hidden sm:flex text-white bg-orange border-2 border-orange hover:bg-white hover:text-orange hover:border-2 hover:border-orange font-bold rounded-md text-sm px-5 py-2.5 mr-2 focus:outline-none">Acceso Usuarios</a>
+                <a href="#" class="hidden sm:flex font-medium  rounded-md text-sm px-5 py-2.5 mr-2 focus:outline-none"><img class="h-6" src="./public/logotipo-de-linkedin.png"></a>
+                <button onclick="openMobileMenu()" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                    <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+                <div id="mobile-menu">
+                  <a href="#news">News</a>
+                  <a href="#contact">Contact</a>
+                  <a href="#about">About</a>
+                </div>
+            </div>
+            <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+                <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                    <li>
+                        <a href="#" class="font-bold block py-2 pr-4 pl-3 text-gray-dark border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-orange lg:p-0 " aria-current="page">Nosotros</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="font-bold block py-2 pr-4 pl-3 text-gray-dark border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-orange lg:p-0 ">Programas</a>
+                        <div class="dropdown-menu top-15 absolute hidden h-auto flex pt-2">
+                          <ul class="block w-full bg-white shadow-md p-8">
+                              <li class="py-1"><a class="text-gray-dark block font-bold text-base hover:text-orange cursor-pointer">Item Item Item</a></li>
+                              <li class="py-1"><a class="text-gray-dark block font-bold text-base hover:text-orange cursor-pointer">Item 2</a></li>
+                              <li class="py-1"><a class="text-gray-dark block font-bold text-base hover:text-orange cursor-pointer">Item 3</a></li>
+                              <li class="py-1"><a class="text-gray-dark block font-bold text-base hover:text-orange cursor-pointer">Item 4</a></li>
+                              <li class="py-1"><a class="text-gray-dark block font-bold text-base hover:text-orange cursor-pointer">Item 5</a></li>
+                          </ul>
+                      </div>
+                    </li>
+                    <li>
+                        <a href="#" class="font-bold block py-2 pr-4 pl-3 text-gray-dark border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-orange lg:p-0 ">Farmanager</a>
+                    </li>
+                    <li>
+                        <a href="#" class="font-bold block py-2 pr-4 pl-3 text-gray-dark border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-orange lg:p-0 ">Usuarios</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <section class="bg-hero bg-center bg-fixed bg-no-repeat bg-cover px-4 lg:px-16 py-16 h-4/5" id="hero">
+      <div class="max-w-screen-xl mx-auto">
+        <div class="backdrop-blur-sm bg-orange/70 py-12 px-16">
+          <p class="text-white text-xl py-6">
+            Farmanexus nació hace más de 20 años con una misión clara: agregar valor a la administración de medicamentos. Desde una perspectiva de mejora continua,
+            a lo largo de los años fuimos ampliando nuestra capacidad de gestión. En la actualidad ofrecemos un servicio 100% de punta a punta, que inicia en la administración 
+            culmina en la logística y dispensación de medicamentos a lo largo de todo el país.
+          </p>
+          <img class="h-16" src="./public/arrow-nav.svg" />
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white px-4 lg:px-6 py-2.5" id="servicios">
+      <div class="max-w-screen-2xl mx-auto py-10">
+        <div class="max-w-screen-lg mx-auto">
+          <div class="bg-orange relative h-40 md:h-72">
+            <div class="absolute top-0 right-0 bottom-0">
+              <img class="h-full" src="./public/SVG/background-2.svg"/>
+            </div>
+            <p class="text-white text-center text-xl pt-6 pb-12">
+              Somos la opción más competitiva para financiadores de la salud gracias
+              <br>
+              a nuestra oferta de servicios 100% customizables:
+            </p>
+          </div>
+            <div class="-top-28 md:flex md:space-x-6 justify-center ">
+              <div class=" bg-white px-6 py-4 shadow-lg text-center">
+                <p>
+                  Gestión integral <br>de medicamentos
+                </p>
+              </div>
+              <div class=" bg-white px-6 py-4 shadow-lg text-center">
+                <p>
+                  Distribución <br>y logística
+                </p>
+              </div>
+              <div class="bg-white px-6 py-4 shadow-lg text-center">
+                <p>
+                  Protocolos <br>de auditoría
+                </p>
+              </div>
+              <div class="bg-white px-6 py-4 shadow-lg text-center">
+                <p>
+                  Gerenciamiento <br>de punta a punta
+                </p>
+              </div>
+            </div>
+         
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gray-light px-4 lg:px-6 py-2.5 relative" id="sobre-nosotros">
+      <div class="absolute top-0 right-0 bottom-0">
+        <img class="h-full" src="./public/SVG/background-3_1.svg"/>
+      </div>
+      <div class="max-w-screen-2xl mx-auto py-10">
+        <div class="max-w-screen-xl mx-auto">
+          
+          <h1 class=" text-8xl text-orange font-bold py-6">
+            Sobre nosotros
+          </h1>
+          <p class="pt-2 pb-2  text-xl">
+            Somos una empresa argentina fundada en 1998 especializada en management de medicamentos.
+            Nuestra misión es agregar valor a través de un servicio integral basado en:
+          </p>
+          <div class="pt-2 pb-2">
+            <ul>
+              <li class=" text-xl">
+                Sistemas operativos que posibilitan la correcta administración de la demanda del medicamento
+                y la trazabilidad integral del proceso.
+              </li>
+              <li class=" text-xl">
+                Alianzas estratégicas con laboratorios y droguerías   
+              </li>
+              <li class=" text-xl">
+                Acuerdos de provisión con una amplia red de farmacias a lo largo de todo el país
+              </li>
+            </ul>
+          </div>
+          <p class="pt-2 pb-2  text-xl">
+            Nuestra filosofía de trabajo se estructura sobre tres pilares clave:
+          </p>
+          <div class="pt-2 pb-2">
+            <div class="box-decoration-clone bg-orange mt-1 mb-1 px-2 py-1 w-3/12">
+              <h4 class="text-white  text-4xl font-bold">Servicio</h4>
+
+            </div>
+            <div class="bg-orange mb-1 px-2 py-1 w-5/12">
+              <h4 class="text-white  text-4xl font-bold">Innovación</h4>
+            </div>
+            <div class="bg-orange mb-1 px-2 py-1 w-4/12">
+              <h4 class="text-white  text-4xl font-bold">Confianza</h4>
+            </div>
+          </div>
+          <p class="pt-2 pb-2  text-xl">
+            Día a día trabajamos a la par de nuestros clientes funcionando como socios estratégicos y referentes de consulta en la gestión de consumo de medicamentos:
+          </p>
+          <div class="pt-2 pb-2">
+            <ul>
+              <li class=" text-xl">
+                Aseguramos excelentes condiciones comerciales.
+              </li>
+              <li class=" text-xl">
+                Facilitamos la toma de decisiones a través de información confiable en tiempo real.
+              </li>
+              <li class=" text-xl">
+                Complementamos las estructuras operativas de nuestros clientes a través del  acompañamiento personalizado.           
+              </li>
+            </ul>
+          </div>
+          <div class="bg-orange my-8">
+            <p class="text-white px-4 py-4 text-2xl text-xl font-bold">
+              En Farmanexus nos interesa construir vínculos duraderos sustentados en la confianza.
+              Nuestra experiencia nos ha demostrado que esto solo se logra con profesionalismo,
+              compromiso y visión innovadora.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="bg-white px-4 lg:px-6 py-2.5" id="farmanager">
+    </section>
+
+    <section class="bg-white px-4 lg:px-6 py-2.5" id="programas">
+      <div class="max-w-screen-2xl mx-auto py-10">
+        <div class="max-w-screen-xl mx-auto">
+          <div class="title ">
+            <h1 class=" text-8xl text-orange font-bold py-2">
+              Programas<br>
+              de Cobertura
+            </h1>
+            <h4 class="pt-2 pb-2 font-myriadConcept text-xl">
+              Ofrecemos programas de cobertura en distintas variantes:
+            </h4>
+          </div>
+          <div class="accordion-body">
+            <div class="accordion">
+              
+              <div class="block-content py-2">
+                <div class="label bg-orange cursor-pointer flex justify-between items-center">
+                  <h2 class="font-myriadConcept text-white text-3xl px-2 py-2">
+                    Medicamentos de Demanda Espontánea
+                  </h2>
+                  <img class="arrow h-4 px-4" src="./public/arrow-down.svg" />
+                  
+                </div>
+                <div class="content h-0 overflow-hidden transitiongg">
+                  Hypertext Markup Language (HTML) is a computer language that makes up most web pages and
+                  online applications. A hypertext is a text that is used to reference other pieces of text, while a markup
+                  language is a series of markings that tells web servers the style and structure of a document. HTML is very
+                  simple to learn and use.ddd
+                </div>
+              </div>
+              
+              <div class="block-content py-2">
+                <div class="label bg-orange cursor-pointer flex justify-between items-center">
+                  <h2 class="font-myriadConcept text-white text-3xl px-2 py-2">
+                    Medicamentos de uso Crónico
+                  </h2>
+                  <img class="h-4 px-4" src="./public/arrow-down.svg" />
+                </div>
+                <div class="content h-0 overflow-hidden transitiongg">
+                  CSS stands for Cascading Style Sheets. It is the language for describing the presentation of
+                  Web pages, including colours, layout, and fonts, thus making our web pages presentable to the users. CSS is
+                  designed to make style sheets for the web. It is independent of HTML and can be used with any XML-based markup
+                  language. CSS is popularly called the design language of the web.
+                </div>
+              </div>
+              
+              <div class="block-content py-2">
+                <div class="label bg-orange cursor-pointer flex justify-between items-center">
+                  <h2 class="font-myriadConcept text-white text-3xl px-2 py-2">
+                    Medicamentos para Diabetes
+                  </h2>
+                  <img class="h-4 px-4" src="./public/arrow-down.svg" />
+                </div>
+                <div class="content h-0 overflow-hidden transitiongg">
+                  JavaScript is a scripting or programming language that allows you to implement complex
+                  features on web pages — every time a web page does more than just sit there and display static information for
+                  you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video
+                  jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third of the web trio.</div>
+              </div>
+              
+              <div class="block-content py-2">
+                <div class="label bg-orange cursor-pointer flex justify-between items-center">
+                  <h2 class="font-myriadConcept text-white text-3xl px-2 py-2">
+                    Medicamentos Oncológicos y Especiales
+                  </h2>
+                  <img class="h-4 px-4" src="./public/arrow-down.svg" />
+
+                </div>
+                <div class="content h-0 overflow-hidden transitiongg">
+                  JavaScript is a scripting or programming language that allows you to implement complex
+                  features on web pages — every time a web page does more than just sit there and display static information for
+                  you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video
+                  jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third of the web trio.</div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-cta bg-center bg-scroll bg-no-repeat bg-cover px-4 lg:px-6 py-2.5" id="trabaja-con-nosotros">
+      <div class="max-w-screen-xl mx-auto">
+        <div class="py-12 px-12">
+          <h1 class="font-bold text-8xl text-white">
+            Trabajá <br>
+            con nosotros
+          </h1>
+          <p class="text-white text-xl py-6">
+            Si estás buscando desarrollarte profesionalmente y te interesa aportar<br> valor a nuestro equipo, envianos tu CV: 
+          </p>
+          <p class="text-white text-3xl py-6">
+            busqueda@farmanexus.com.ar
+          </p>
+         
+        </div>
+      </div>
+    </section>
+
+    <footer class="" id="footer">
+      <div class="max-w-screen-xl px-4 lg:px-6 py-16 mx-auto">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+          <div class="px-8">
+            <img src="/public/farmanexus-logo-footer.svg" class="w-1/4 lg:w-full lg:mx-auto" alt="logo" />
+          </div>
+          <div class="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-3 items-center	">
+            <div>
+              <p class="font-bold text-orange">
+                Centro de Atención a Beneficiarios FARMANEXUS
+              </p>
+              <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                <a class="text-orange hover:opacity-75" href>Interior del país: 0810-266-4224</a>
+                <a class="text-orange hover:opacity-75" href>Buenos Aires: (011) 7700-0901</a>
+              </nav>
+            </div>
+            <div>
+              <p class="text-orange font-bold text-orange">
+                Centro de Atención a Farmacias FARMANEXUS
+              </p>
+              <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                <a class="text-orange hover:opacity-75" href>Interior del país: 0810-226-4225</a>
+                <a class="text-orange hover:opacity-75" href>Buenos Aires: (011) 7700-0902</a>
+              </nav>
+            </div>
+            <div>
+              <p class="font-bold text-orange">
+                Oficinas GRUPO PROYECTA
+              </p>
+              <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                <a class="text-orange hover:opacity-75" href>(011) 7700-0900 - Tte. Gral. J. D. Perón 1479 3º Of 7</a>
+                <a class="text-orange hover:opacity-75" href>C1037ACA, CABA</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-gray-light px-4 py-6 mx-auto sm:px-6 lg:px-8">
+        <div class="max-w-screen-xl mx-auto">
+          <p class="text-orange text-center sm:text-right text-xs text-gray-800">
+            Copyright © 2022. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <section class="container mx-auto overflow-hidden" id="form-modal">
+      <div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="modal-id">
+        <div class="relative w-auto my-6 mx-auto max-w-3xl">
+          <!--content-->
+          <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+            <!--header-->
+            <div class="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+              <h3 class="text-orange text-3xl font-semibold">
+                Formulario de contacto
+              </h3>
+              <button class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none" id="close" onclick="toggleModal('modal-id')">
+                <span class="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                  ×
+                </span>
+              </button>
+            </div>
+            <!--body-->
+            <div class="relative p-6 flex-auto">
+              <div class="grid grid-cols-1 gap-6">
+                <label class="block">
+                  <span class="text-gray-700">Full name</span>
+                  <input type="text" class="
+                      mt-1
+                      block
+                      w-full
+                      rounded-md
+                      bg-gray-100
+                      border-transparent
+                      focus:border-gray-500 focus:bg-white focus:ring-0
+                    " placeholder="">
+                </label>
+                <label class="block">
+                  <span class="text-gray-700">Email address</span>
+                  <input type="email" class="
+                      mt-1
+                      block
+                      w-full
+                      rounded-md
+                      bg-gray-100
+                      border-transparent
+                      focus:border-gray-500 focus:bg-white focus:ring-0
+                    " placeholder="john@example.com">
+                </label>
+                <label class="block">
+                  <span class="text-gray-700">When is your event?</span>
+                  <input type="date" class="
+                      mt-1
+                      block
+                      w-full
+                      rounded-md
+                      bg-gray-100
+                      border-transparent
+                      focus:border-gray-500 focus:bg-white focus:ring-0
+                    ">
+                </label>
+                <label class="block">
+                  <span class="text-gray-700">What type of event is it?</span>
+                  <select class="
+                      block
+                      w-full
+                      mt-1
+                      rounded-md
+                      bg-gray-100
+                      border-transparent
+                      focus:border-gray-500 focus:bg-white focus:ring-0
+                    ">
+                    <option>Corporate event</option>
+                    <option>Wedding</option>
+                    <option>Birthday</option>
+                    <option>Other</option>
+                  </select>
+                </label>
+                <label class="block">
+                  <span class="text-gray-700">Additional details</span>
+                  <textarea class="
+                      mt-1
+                      block
+                      w-full
+                      rounded-md
+                      bg-gray-100
+                      border-transparent
+                      caret-orange
+                      focus:border-gray-500 focus:bg-white focus:ring-0
+                    " rows="3"></textarea>
+                </label>
+                <div class="block">
+                  <div class="mt-2">
+                    <div>
+                      <label class="inline-flex items-center">
+                        <input type="checkbox" class="
+                            rounded
+                            bg-gray-200
+                            border-transparent
+                            focus:border-transparent focus:bg-gray-200
+                            text-gray-700
+                            focus:ring-1 focus:ring-offset-2 focus:ring-gray-500
+                          ">
+                        <span class="ml-2">Email me news and special offers</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--footer-->
+            <div class="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+              <button class="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" onclick="toggleModal('modal-id')">
+                Close
+              </button>
+              <button class="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" onclick="toggleModal('modal-id')">
+                Save Changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="modal-id-backdrop"></div>
+    </section>
+
+    <script type="module" src="./assets/js/main.js"></script>
+    <script type="text/javascript" src="./assets/js/modal.js"></script>
+    <script type="text/javascript" src="./assets/js/accordion.js"></script>
+    <script type="text/javascript" src="./assets/js/navbar.js"></script>
+
+</body>
+</html>

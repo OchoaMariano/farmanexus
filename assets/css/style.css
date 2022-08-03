@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'PT Sans', sans-serif;
+  }
+}
+
+nav {
+  /* default styling */
+  transition: top 1.5s ease-in-out;
+}
+
+nav.scroll-up {
+  top: 0;
+  filter: drop-shadow(0 1px 1px rgb(0 0 0 / 0.05));
+}
+
+nav.scroll-down {
+  top: -100%;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+#mobile-menu {
+  display: none;
+}
+
+.transitiongg {
+  transition: all 0.3s ease-in-out;
+}
+
+@keyframes animate{
+  from{
+      opacity: 0;
+      transform: scale(0.6);
+  }
+  to{
+      opacity: 1;
+      transform: scale(1);
+  }
+}
